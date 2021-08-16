@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký học viên</title>
+</head>
+<style>
+    table  {
+        background-color: bisque;
+    }
+    table tr th {
+        background-color: #c4f3e8;
+        color: blue;
+    }
+    table tr td {
+        color: blue;
+    }
+</style>
+<body>
+<table>
+    <tr>
+        <th colspan="4" style="text-align: left">ĐĂNG KÝ HỌC VIÊN</th>
+
+    </tr>
+    <tr>
+        <td>Họ và Tên</td>
+        <td><input name="Tên" placeholder="Yourname" type="text"></td>
+    </tr>
+    <tr>
+        <td>Ngày sinh</td>
+        <td><input name="Ngày sinh"type="date"></td>
+    </tr>
+    <tr>
+        <td>Giới tính</td>
+        <td>
+            <label><input name="sex" value="nam" type="radio"</label>Nam
+            <label><input name="sex" value="nữ" type="radio"</label>Nữ
+        </td>
+    </tr>
+    <tr>
+        <td>Địa chỉ</td>
+        <td> <textarea cols="30" rows="4"></textarea></td>
+    </tr>
+    <tr>
+        <td>Lớp</td>
+        <td><select name="class">
+            <option value="chonlop">-chọn lớp-</option>
+            <option value="12">12A1</option>
+            <option value="12">12A2</option>
+            <option value="12">12A3</option>
+            <option value="12">12A4</option>
+            <option value="12">12A5</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input name="Email"  placeholder="Email" type="text"></td>
+    </tr>
+    <tr>
+        <td>Số điện thoại</td>
+            <td><input name="usrtel"  placeholder="Nhập số điện thoại" type="tel" ></td>
+    </tr>
+</table>
+</body>
+</html>
