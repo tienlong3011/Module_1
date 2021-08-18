@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình tròn</title>
+</head>
+<body>
+<button onclick="shinhtron()">Diện tích hình tròn</button>
+<script>
+    function shinhtron() {
+        let duongkinh;
+        let pi=3.14;
+        duongkinh = prompt("Nhập đường kính");
+        let d = parseInt(duongkinh);
+        let s = d**2/4*pi
+        document.write('Diện tích hình tròn là:' + s)
+
+    }
+</script>
+</body>
+</html>
