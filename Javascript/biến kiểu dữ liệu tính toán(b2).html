@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi nhiệt độ</title>
+</head>
+<body>
+<button onclick="nhietdo()">Đổi nhiệt độ</button>x
+<script>
+    function nhietdo() {
+        let celsius;
+        let fahrenheit;
+        fahrenheit = prompt("Độ F");
+        let b = parseInt(fahrenheit);
+        celsius = (b-32)/9*5
+        document.write("Độ F: "  + fahrenheit + '<br/>')
+        document.write("Độ C: " + celsius + '<br/>')
+    }
+</script>
+</body>
+</html>
