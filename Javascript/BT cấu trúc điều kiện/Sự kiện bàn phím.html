@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+    <style>
+        img {
+            height: 300px;
+            width: 168px;
+        }
+    </style>
+</head>
+<body onload="docReady()">
+<img id="anh" src="image/Untitled.jpg" alt="khonghienthi" />
+<script>
+    function uparrow() {
+        let element = document.getElementById("anh");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+    function downarrow() {
+        let element = document.getElementById("anh");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+       function leftarrow() {
+        let element = document.getElementById("anh");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+       function rightarrow() {
+        let element = document.getElementById("anh");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftarrow();
+                break;
+                case 39:
+                rightarrow();
+                break;
+                case 38:
+                uparrow();
+                break;
+                case 40:
+                downarrow();
+                break;
+        }
+    }
+    function docReady() {
+        init()
+        window.addEventListener("keydown", moveSelection)
+    }
+
+    function init() {
+        let imgObj = document.getElementById("anh");
+        imgObj.style.position = "absolute";
+        imgObj.style.left = "300px";
+        imgObj.style.top = "300px";
+    }
+</script>
+</body>
+</html>
