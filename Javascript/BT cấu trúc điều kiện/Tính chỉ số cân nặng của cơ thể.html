@@ -6,8 +6,11 @@
 </head>
 <body>
 <script>
-    let bmi = prompt("Nhập số cân");
-
+    let cannang = prompt( "Nhập cân nặng");
+    let chieucao = prompt("Nhập chiều cao");
+    cannang = parseFloat(cannang);
+    chieucao = parseFloat(chieucao);
+    let bmi = cannang/(chieucao^2)
     bmi = parseInt(bmi);
     if (bmi <18) {
         document.write("Underweight");

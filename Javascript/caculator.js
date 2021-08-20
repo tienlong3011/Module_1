@@ -14,3 +14,29 @@ function phepCong() {
 //     b3: In kết quả ra
     document.getElementById("result").innerText = result;
 }
+function phepTru() {
+    let num1 = document.getElementById("num1").value;
+    num1 = parseInt(num1)
+    let num2 = document.getElementById("num2").value;
+    num2 = parseInt(num2)
+    let reuslt = num1 - num2
+    document.getElementById("result").innerText = reuslt;
+
+}
+function phepNhan() {
+    let num1 = document.getElementById("num1").value;
+    num1 = parseInt(num1)
+    let num2 = document.getElementById("num2").value;
+    num2 = parseInt(num2)
+    let reuslt = num1 * num2
+    document.getElementById("result").innerText = reuslt;
+
+}
+function phepChia() {
+    let num1 = document.getElementById("num1").value;
+    num1 = parseInt(num1)
+    let num2 = document.getElementById("num2").value;
+    num2 = parseInt(num2)
+    let reuslt = num1 / num2
+    document.getElementById("result").innerText = reuslt;
+}

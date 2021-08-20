@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+<h1>Caculator for noob</h1>
+<form>
+    <table>
+        <tr>
+            <td id="dis" colspan="4"><label for="display"></label>
+                <input type="text" value="" id="display" size="20">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" name="one" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="2" name="two" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="3" name="three" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="+" name="plus" onclick="showValue(value)">
+            </td>
+        </tr>
+        <trr>
+            <td>
+                <input type="button" value="4" name="four" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="5" name="five" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="6" name="six" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="-" name="minus" onclick="showValue(value)">
+            </td>
+        </trr>
+        <tr>
+            <td>
+                <input value="7" type="button" name="seven" onclick="showValue(value)">
+            </td>
+            <td>
+                <input value="8" type="button" name="eight" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="9" name="nine" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="*" name="multiple" onclick="showValue(value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button style="width: 25px" type="reset" value="C">C</button>
+            </td>
+            <td>
+                <input type="button" value="0" name="n0" onclick="showValue(value)">
+            </td>
+            <td>
+                <input type="button" value="=" onclick="calculator()" />
+            </td>
+            <td>
+                <input type="button" value="/" name="div" onclick="showValue(value)">
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    function showValue(value) {
+        document.getElementById("display").value += value;
+    }
+
+    function calculator() {
+        document.getElementById("display").value = eval(document.getElementById("display").value);
+    }
+</script>
+
+</body>
+</html>
