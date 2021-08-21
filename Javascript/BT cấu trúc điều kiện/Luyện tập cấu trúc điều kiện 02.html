@@ -150,27 +150,42 @@
 
 <!--bài tâp 10:-->
 <!--<h2>Tính giá điện theo nhà nước quy định</h2>-->
-<!--<label for="sodien">Nhập số điện: <input name="sodienhangthang" type="text" value="" id="sodien"></label>-->
+<!--<label for="sodiencu">Nhập số điện cũ: <input name="sodienhangthang" type="text" value="" id="sodiencu"></label><br>-->
+<!--<label for="sodienmoi">Nhập số điện mới: <input name="sodienhangthang" type="text" value="" id="sodienmoi"></label>-->
 <!--<button onclick="giatien()">Giá tiền</button>-->
 <!--<p id="result"></p>-->
 <!--<script>-->
 <!--    function giatien() {-->
-<!--        let num = document.getElementById("sodien").value;-->
-<!--        parseInt(num);-->
-<!--        if (num > 0 && num < 50) {-->
-<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 1678 + "VNĐ"-->
-<!--        } else if (num >= 51 && num <= 100) {-->
-<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 1734 + "VNĐ"-->
-<!--        } else if (num >= 101 && num <= 200) {-->
-<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 2014 + "VNĐ"-->
-<!--        } else if (num >= 201 && num <= 300) {-->
-<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 2536 + "VNĐ"-->
-<!--        } else if (num >= 301 && num <= 400) {-->
-<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 2834 + "VNĐ"-->
-<!--        }else if (num >= 401) {-->
-<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 2927 + "VNĐ"-->
+<!--        let num1 = document.getElementById("sodiencu").value;-->
+<!--        parseInt(num1);-->
+<!--        let num2 = document.getElementById("sodienmoi").value;-->
+<!--        parseInt(num2);-->
+<!--        let num= num2 - num1;-->
+<!--        let bac1= num * 1678;-->
+<!--        let bac2= 50 * 1678 + (num-49)*1734 ;-->
+<!--        let bac3= 50 * 1678 + 49*1734 + (num-99)*2014 ;-->
+<!--        let bac4= 50 * 1678 + 49*1734 + 99*2014 + (num-199)*2536;-->
+<!--        let bac5= 50 * 1678 + 49*1734 + 99*2014 + 199*2536 + (num-299)*2834;-->
+<!--        let bac6= 50 * 1678 + 49*1734 + 99*2014 + 199*2536 + 299*2834 + (num-399)*2927;-->
+
+<!--        if (num <= 50) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + bac1  + "VNĐ"-->
+<!--        } else if (num <= 100) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + bac2 + "VNĐ"-->
+<!--        } else if ( num <= 200) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + bac3 + "VNĐ"-->
+<!--        } else if (num <= 300) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + bac4 + "VNĐ"-->
+<!--        } else if ( num <= 400) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + bac5 + "VNĐ"-->
+<!--        }else if (num  >= 401) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + bac6 + "VNĐ"-->
+<!--        } else {-->
+<!--            document.getElementById("result").innerText = "Nhập sai.Yêu cầu nhập lại!"-->
 <!--        }-->
 <!--    }-->
+
+
 <!--</script>-->
 
 <!--bài tập 11:-->
