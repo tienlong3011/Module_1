@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--bài tập 1:-->
+<!--<script>-->
+<!--    let a = prompt("nhập độ C");-->
+<!--    parseInt(a);-->
+<!--    let b = a * 9/5 +32-->
+<!--    alert(b)-->
+<!--</script>-->
+
+<!--bài tập 2:-->
+<!--<script>-->
+<!--    let a = prompt("nhập số Mét");-->
+<!--    parseInt(a);-->
+<!--    let b = a * 3.2808-->
+<!--    alert(b)-->
+<!--</script>-->
+
+<!--bài tập 3:-->
+
+<!--<label for="dientich">Nhập chiều dài một cạnh: <input name="canh" type="text" value="" id="dientich"></label>-->
+<!--<button onclick="S()">S hình vuông</button>-->
+<!--<p id="dientichhinhvuong"></p>-->
+<!--<script>-->
+<!--    function S(){-->
+<!--        let num = document.getElementById("dientich").value;-->
+<!--        parseInt(num)-->
+<!--        document.getElementById("dientichhinhvuong").innerText = "Diện tích = " + num*num-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài tập 4:-->
+<!--<label for="width">Nhập chiều rộng: <input name="canh" type="text" value="" id="width"></label><br>-->
+<!--<label for="long">Nhập chiều dài: <input name="canh1" type="text" value="" id="long"></label><br>-->
+<!--<button onclick="S()">Diện tích</button>-->
+<!--<p id="result"></p>-->
+<!--<script>-->
+<!--    function S() {-->
+<!--        let num1 = document.getElementById("width").value;-->
+<!--        parseInt(num1);-->
+<!--        let num2 = document.getElementById("long").value;-->
+<!--        parseInt(num2);-->
+<!--        document.getElementById("result").innerText = "Diện tích là: " + num1*num2-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài tập 5:-->
+<!--<label for="height">Nhập chiều cao: <input name="canh" type="text" value="" id="height"></label><br>-->
+<!--<label for="width">Nhập chiều rộng đáy: <input name="canh1" type="text" value="" id="width"></label><br>-->
+<!--<button onclick="S()">Diện tích</button>-->
+<!--<p id="result"></p>-->
+<!--<script>-->
+<!--    function S() {-->
+<!--        let num1 = document.getElementById("height").value;-->
+<!--        parseInt(num1);-->
+<!--        let num2 = document.getElementById("width").value;-->
+<!--        parseInt(num2);-->
+<!--        document.getElementById("result").innerText = "Diện tích là: " + 1/2*num1*num2-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài tập 6: a*x + b= 0 -->
+<!--<script>-->
+<!--    let a = Math.random()*300 -150;-->
+<!--    let b = Math.random()*300 -150;-->
+<!--    a=parseInt(a);-->
+<!--    b=parseInt(b);-->
+
+<!--    alert('ta có với a = '+ a +' và b = '+ b +'\nta có kết quả quả phương trình ax+b=0')-->
+
+<!--    if (a === 0) {-->
+<!--        if (b === 0)-->
+<!--        {-->
+<!--            alert('Phương trình có vô số nghiệm')-->
+<!--        }-->
+<!--        else {-->
+<!--            alert('Phương trình có vô nghiệm')-->
+<!--        }-->
+<!--    }-->
+<!--    else{-->
+<!--        alert('Phương trình có một nghiệm là x: ' + (-b/a) )-->
+<!--        }-->
+<!--</script>-->
+
+<!--bài tập 7:ax^2 + bx + c = 0-->
+<!--<script>-->
+<!--    let a = prompt('Nhập giá trị của a')-->
+<!--    let b = prompt('Nhập giá trị của b')-->
+<!--    let c = prompt('Nhập giá trị của c')-->
+
+<!--    if(a === 0) {-->
+<!--        if(b === 0) {-->
+<!--            if (c === 0) {-->
+<!--                alert('Phuong trinh vo so nghiem')-->
+<!--            } else {-->
+<!--                alert('Phuong trinh vo nghiem')-->
+<!--            }-->
+<!--        } else {-->
+<!--            alert('Phuong trinh co nghiem duy nhat: '+(-c/b))-->
+<!--        }-->
+<!--    } else {-->
+<!--        let delta = b*b - 4*a*c;-->
+<!--        if(delta > 0) {-->
+<!--            let x1 = (-b+Math.sqrt(delta))/(2*a);-->
+<!--            let x2 = (-b-Math.sqrt(delta))/(2*a);-->
+<!--            alert('Nghiem thu nhat x1 = '+x1+'\n Nghiem thu hai x2 = '+x2)-->
+<!--        } else if ( delta === 0) {-->
+<!--            let sum = -b/2*a-->
+<!--            alert('Phuong trinh co nghiem kep: x1 = x2 = '+sum)-->
+<!--        } else {-->
+<!--            alert('Phuong trinh vo nghiem')-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài tập 8:-->
+<!--<script>-->
+<!--    let a = prompt("Nhập số tuổi");-->
+<!--    parseInt(a);-->
+<!--    if (a > 0){-->
+<!--        if (a <120){-->
+<!--            alert("Đúng số tuổi !")-->
+<!--        } else {-->
+<!--            alert("Sai số tuổi !")-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài tập 9:-->
+<!--<script>-->
+<!--    let a =prompt("Nhập cạnh a");-->
+<!--    let b =prompt("Nhập cạnh b");-->
+<!--    let c =prompt("Nhập cạnh c");-->
+<!--    parseInt(a);-->
+<!--    parseInt(b);-->
+<!--    parseInt(c);-->
+<!--    if (a > 0 && b>0 && c >0) {-->
+<!--        if (a + b > c && b + c > a && a + c > b) {-->
+<!--            alert("Các cạnh a,b,c là các cạnh của một tam giác")-->
+<!--        } else {-->
+<!--            alert("Các cạnh a,b,c không phải là các cạnh của một tam giác")-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài tâp 10:-->
+<!--<h2>Tính giá điện theo nhà nước quy định</h2>-->
+<!--<label for="sodien">Nhập số điện: <input name="sodienhangthang" type="text" value="" id="sodien"></label>-->
+<!--<button onclick="giatien()">Giá tiền</button>-->
+<!--<p id="result"></p>-->
+<!--<script>-->
+<!--    function giatien() {-->
+<!--        let num = document.getElementById("sodien").value;-->
+<!--        parseInt(num);-->
+<!--        if (num > 0 && num < 50) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 1678 + "VNĐ"-->
+<!--        } else if (num >= 51 && num <= 100) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 1734 + "VNĐ"-->
+<!--        } else if (num >= 101 && num <= 200) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 2014 + "VNĐ"-->
+<!--        } else if (num >= 201 && num <= 300) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 2536 + "VNĐ"-->
+<!--        } else if (num >= 301 && num <= 400) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 2834 + "VNĐ"-->
+<!--        }else if (num >= 401) {-->
+<!--            document.getElementById("result").innerText = "Số tiền điện tháng này là:" + " " + num * 2927 + "VNĐ"-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài tập 11:-->
+<!--<label for="tienluong">Nhập số tiền lương: <input name="tienluongthang" type="text" value="" id="tienluong"></label>-->
+<!--<button onclick="check()">Thuế thu nhập cá nhân</button>-->
+<!--<p id="result"></p>-->
+<!--<script>-->
+<!--    function check() {-->
+<!--        let num = document.getElementById("tienluong").value;-->
+<!--        parseInt(num);-->
+<!--        if (num > 1000000 && num < 5000000) {-->
+<!--            document.getElementById("result").innerText = "Số tiền thuế là:" + " " + num * 5/100+ "VNĐ"-->
+<!--        } else if (num >= 6000000 && num <= 10000000) {-->
+<!--            document.getElementById("result").innerText = "Số tiền thuế này là:" + " " + num * 10/100 + "VNĐ"-->
+<!--        } else if (num >= 10000000 && num <= 20000000) {-->
+<!--            document.getElementById("result").innerText = "Số tiền thuế này là:" + " " + num * 15/100 + "VNĐ"-->
+<!--        } else if (num >= 20000000 && num <= 30000000) {-->
+<!--            document.getElementById("result").innerText = "Số tiền thuê này là:" + " " + num * 20/100 + "VNĐ"-->
+<!--        } else if (num >= 30000000 && num <= 40000000) {-->
+<!--            document.getElementById("result").innerText = "Số tiền thuế này là:" + " " + num * 25/100  + "VNĐ"-->
+<!--        }else if (num >= 40000000) {-->
+<!--            document.getElementById("result").innerText = "Số tiền thuế này là:" + " " + num * 30/100 + "VNĐ"-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+
+
+<!--bài tập 12:-->
+<!--<label for="inputMoney">Nhập số tiền vay: <input name="sotienvay" type="text" value="" id="inputMoney"></label><br>-->
+<!--<label for="inputMonth">Nhập số tháng vay: <input name="sotienvay" type="text" value="" id="inputMonth"></label><br>-->
+<!--<button onclick="check()">Tính số tiền lãi</button>-->
+<!--<p id="result"></p>-->
+<!--<script>-->
+<!--function check() {-->
+<!--    let inputMoney;-->
+<!--    inputMoney = document.getElementById("inputMoney").value;-->
+<!--    let inputMonth;-->
+<!--    inputMonth = document.getElementById("inputMonth").value;-->
+<!--    let month = parseInt(inputMonth)-->
+<!--    let m  = parseInt(inputMoney);-->
+<!--    let m1 = m + m * 8 / 100;-->
+<!--    let m2 = m1 + m1 * 8.1 / 100;-->
+<!--    let m3 = m2 + m2 * 8.2 /100;-->
+<!--    let m4 = m3 + m3 * 8.3 / 100;-->
+<!--    let m5 = m4 + m4 * 8.4 / 100;-->
+<!--    let m6 = m5 + m5 * 8.4 / 100;-->
+<!--    switch(month) {-->
+<!--        case 1:-->
+<!--            document.getElementById("result").innerText = "Số tiền phải trả là: " + m1;-->
+<!--            break;-->
+<!--        case 2:-->
+<!--            document.getElementById("result").innerText = "Số tiền phải trả là: " + m2;-->
+<!--            break;-->
+<!--        case 3:-->
+<!--            document.getElementById("result").innerText = "Số tiền phải trả là: " + m3;-->
+<!--            break;-->
+<!--        case 4:-->
+<!--            document.getElementById("result").innerText = "Số tiền phải trả là: " + m4;-->
+<!--            break;-->
+<!--        case 5:-->
+<!--            document.getElementById("result").innerText = "Số tiền phải trả là: " + m5;-->
+<!--            break;-->
+<!--        case 6:-->
+<!--            document.getElementById("result").innerText = "Số tiền phải trả là: " + m6;-->
+<!--            break;-->
+<!--        default:-->
+<!--            document.getElementById("result").innerText = "bạn quá hạn nhiều quá liên hệ ngân hàng đi";-->
+<!--    }-->
+<!--}-->
+<!--</script>-->
+
+
+
+
+</body>
+</html>
