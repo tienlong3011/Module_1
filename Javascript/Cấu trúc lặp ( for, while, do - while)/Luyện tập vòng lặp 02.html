@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--bài 1:-->
+<script>
+    let n1 = 0;
+    let n2 = 1;
+    const number = parseInt(prompt("Dãy số cần tìm: "));
+    let nextTerm;
+    for (let i = 0; i < number; i++){
+        document.write("Dãy số Finonaci là: " + n1 + "<br>")
+        nextTerm = n1 + n2;
+        n1 = n2;
+        n2 = nextTerm;
+    }
+</script>
+
+
+
+</body>
+</html>

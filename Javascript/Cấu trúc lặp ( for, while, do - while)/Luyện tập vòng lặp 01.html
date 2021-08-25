@@ -30,17 +30,109 @@
 <!--</script>-->
 
 <!--bài 3:-->
+<!--<script>-->
+<!--    const number = parseInt(prompt('Enter the number of terms: '));-->
+<!--    let n1 = 0, n2 = 1, nextTerm;-->
+
+<!--    document.write('Fibonacci Series:' + "<br>");-->
+
+<!--    for (let i = 1; i <= number; i++) {-->
+<!--        document.write(n1 + "<br>");-->
+<!--        nextTerm = n1 + n2;-->
+<!--        n1 = n2;-->
+<!--        n2 = nextTerm;-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài.4-->
+<!--<script>-->
+<!--    let n1 = 0;-->
+<!--    let n2 = 1;-->
+<!--    let nextTerm;-->
+<!--    for ( let  i = 1; i <= 5; i++) {-->
+<!--        if(n1 % 5 === 0){-->
+<!--            break;-->
+<!--        }-->
+<!--        nextTerm = n1 + n2;-->
+<!--        n1 = n2;-->
+<!--        n2 = nextTerm;-->
+<!--    }-->
+<!--    document.write("Số " + n1 + " chia hết cho 5")-->
+<!--</script>-->
+
+<!--bài 5:-->
+<!--<script>-->
+<!--    let n1 = 0;-->
+<!--    let n2 = 1;-->
+<!--    let n3 = 1;-->
+<!--    let sum = 0;-->
+<!--    for ( let i = 2;i < 19 ; i++){-->
+<!--        n1 = n2;-->
+<!--        n2 = n3;-->
+<!--        n3 = n1 + n2;-->
+<!--        sum += n3;-->
+<!--    }-->
+<!--        sum = sum +2;-->
+<!--        document.write("Tổng của dãy số là: " + sum)-->
+<!--</script>-->
+
+<!--Bài 6:-->
+<!--<script>-->
+<!--    let num = 1;-->
+<!--    let count = 0;-->
+<!--    let sum = 0;-->
+<!--    while(count < 30){-->
+<!--        if(num % 7 === 0) {-->
+<!--            sum+=num;-->
+<!--            count++;-->
+<!--        }-->
+<!--        num++-->
+
+<!--    }-->
+<!--    document.write("Tổng của dãy số là: " + sum)-->
+<!--</script>-->
+
+<!--bài 7:-->
+<!--<script>-->
+<!--    let num = 1;-->
+<!--    let count = 1;-->
+<!--    while (count <= 100) {-->
+<!--        if (num % 3 === 0 && num % 5 === 0) {-->
+<!--            document.write("FizzBuzz !!!" + "<br>")-->
+<!--        } else if (num % 5 === 0) {-->
+<!--            document.write("Buzz !!!" + "<br>")-->
+<!--        } else if (num % 3 === 0){-->
+<!--            document.write("Fizz !!!" + "<br>")-->
+<!--        }-->
+<!--            count++;-->
+<!--            num++-->
+<!--        }-->
+<!--</script>-->
+
+
+<!--bài 9-->
+<button onclick="playGame()"></button>
 <script>
-    const number = parseInt(prompt('Enter the number of terms: '));
-    let n1 = 0, n2 = 1, nextTerm;
-
-    document.write('Fibonacci Series:' + "<br>");
-
-    for (let i = 1; i <= number; i++) {
-        document.write(n1 + "<br>");
-        nextTerm = n1 + n2;
-        n1 = n2;
-        n2 = nextTerm;
+    let min = parseInt(prompt("Nhập số min: "));
+    let max = parseInt(prompt("Nhập số max: "));
+    let num = Math.floor(Math.random() * (max- min)) + min;
+    let i = 1;
+    let guestNum;
+    function playGame() {
+        do {
+            guestNum = parseInt(prompt("Số bạn đoán: "));
+            if (guestNum < num) {
+                alert("Nhập số lớn hơn")
+            } else if (guestNum > num) {
+                alert("Nhập số nhỏ hơn đi")
+            }
+            i++;
+        } while (guestNum !== num && i <= 3);
+        if (guestNum === num) {
+            alert("Chúc mừng bạn !")
+        } else {
+            alert("Rất tiếc đã sai")
+        }
     }
 </script>
 </body>
