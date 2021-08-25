@@ -6,20 +6,56 @@
 </head>
 <body>
 <!--bài 1:-->
+<!--<script>-->
+<!--    let n1 = 0;-->
+<!--    let n2 = 1;-->
+<!--    const number = parseInt(prompt("Dãy số cần tìm: "));-->
+<!--    let nextTerm;-->
+<!--    for (let i = 0; i < number; i++){-->
+<!--        document.write("Dãy số Finonaci là: " + n1 + "<br>")-->
+<!--        nextTerm = n1 + n2;-->
+<!--        n1 = n2;-->
+<!--        n2 = nextTerm;-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài 2:-->
+
 <script>
-    let n1 = 0;
-    let n2 = 1;
-    const number = parseInt(prompt("Dãy số cần tìm: "));
-    let nextTerm;
-    for (let i = 0; i < number; i++){
-        document.write("Dãy số Finonaci là: " + n1 + "<br>")
-        nextTerm = n1 + n2;
-        n1 = n2;
-        n2 = nextTerm;
-    }
+    const number = parseInt(prompt("Nhập số cần tính:"));
+    let giaithua = 1;
+
+    for (let i = 1; i <= number ; i++) {
+         giaithua *= i
+        }
+    alert(giaithua)
+
+
+    // document.write("Giai thừa của " + number + " là" + giaithua)
+
 </script>
 
+<!--bài 3:-->
+<!--<script>-->
+<!--    for (let i = 1; i <= 5; i++) {-->
+<!--        for (let j = 1; j < i; j++) {-->
+<!--            document.write('&ensp;');-->
+<!--        }-->
+<!--        for (let j = 5; j >= i; j&#45;&#45;) {-->
+<!--            document.write('*');-->
+<!--        }-->
+<!--        document.write("<br>")-->
+<!--    }-->
 
-
+<!--    for (let i = 0; i <= 5; i++) {-->
+<!--        for (let j = 4; j >= i; j&#45;&#45;) {-->
+<!--            document.write('&ensp;');-->
+<!--        }-->
+<!--        for (let j = 1; j <= i; j++) {-->
+<!--            document.write('*');-->
+<!--        }-->
+<!--        document.write("<br>")-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>

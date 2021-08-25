@@ -118,22 +118,22 @@
     let num = Math.floor(Math.random() * (max- min)) + min;
     let i = 1;
     let guestNum;
-    function playGame() {
-        do {
-            guestNum = parseInt(prompt("Số bạn đoán: "));
-            if (guestNum < num) {
-                alert("Nhập số lớn hơn")
-            } else if (guestNum > num) {
-                alert("Nhập số nhỏ hơn đi")
-            }
-            i++;
-        } while (guestNum !== num && i <= 3);
-        if (guestNum === num) {
-            alert("Chúc mừng bạn !")
-        } else {
-            alert("Rất tiếc đã sai")
+    function playGame(){
+    do{
+        guestNum=parseInt(prompt("Số bạn đoán: "));
+        if (guestNum < num){
+            alert("Nhập số lớn hơn")
+        } else if (guestNum > num){
+            alert("Nhập số nhỏ hơn đi")
         }
+        i++;
+    } while (guestNum !== num && i <= 3);
+    if (guestNum===num) {
+        alert("Chúc mừng bạn !")
+    }else {
+        alert("Rất tiếc đã sai")
     }
+}
 </script>
 </body>
 </html>
