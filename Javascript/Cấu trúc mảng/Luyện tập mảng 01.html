@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--bài 1-->
+<!--<script>-->
+<!--  let arr = [1,20,5,4,23,6,100,55,30];-->
+<!--  let num = 0;-->
+<!--  for (let i = 0; i < arr.length; i++) {-->
+<!--      if(arr[i] >= 10){-->
+<!--          num = arr[i]-->
+<!--          alert(num)-->
+<!--      }-->
+<!--  }-->
+<!--</script>-->
+
+<!--bài 2-->
+<!--<script>-->
+<!--    let arr = [1,20,5,4,23,6,100,55,30];-->
+<!--    let max = 0;-->
+<!--    let vitriMax;-->
+<!--    for (let i = 0; i < arr.length; i++) {-->
+<!--        if (max < arr[i]){-->
+<!--            max = arr[i];-->
+<!--            vitriMax = i;-->
+<!--        }-->
+<!--    }-->
+<!--    alert("Số lớn nhất là: " + max + " và vị trí nằm ở: " + vitriMax)-->
+<!--</script>-->
+
+<!--bài 3:-->
+<!--<script>-->
+<!--    let arr =  [1,20,5,4,23,6,100,55,30];-->
+<!--    let max = 0;-->
+<!--    let vitriMax;-->
+<!--    let sum = 0;-->
+<!--    // let tb-->
+<!--    for (let i = 0; i < arr.length; i++) {-->
+<!--        if (max < arr[i]){-->
+<!--            max = arr[i];-->
+<!--            vitriMax = i;-->
+<!--        }-->
+<!--        sum+= arr[i];-->
+<!--    } sum = sum / arr.length-->
+<!--    alert("Số lớn nhất là: " + max)-->
+<!--    alert("số tb là:" + sum )-->
+<!--</script>-->
+
+<!--bài 4:-->
+<!--<script>-->
+<!--    let arr =  [1,20,5,4,23,6,100,55,30];-->
+<!--    alert(arr.reverse())-->
+<!--</script>-->
+
+<!--bài 5:-->
+<!--<input type="text" id="txtValue">-->
+<!--<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();">-->
+<!--<input type="button" id="btnDisplay" value="Display" onclick="display_array();">-->
+<!--<script>-->
+<!--    let count = 0;-->
+<!--    let x = 0;-->
+<!--    let array = Array();-->
+<!--    function add_element_to_array() {-->
+<!--        array[x] = document.getElementById("txtValue").value;-->
+<!--        alert("Element: " + array[x] + " Add at index " + x);-->
+<!--        x++;-->
+<!--        document.getElementById("txtValue").value = "";-->
+<!--    }-->
+<!--    function display_array(){-->
+<!--        for (let i = 0; i < array.length; i++) {-->
+<!--            if(array[i] < 0){-->
+<!--                count++;-->
+<!--            }-->
+<!--        }-->
+<!--        document.write("Số nguyên âm trong chuỗi là:" + count)-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài 6:-->
+<!--<input type="text" id="txtValue">-->
+<!--<input type="button" id="add" value="Add" onclick="add_element_to_array();">-->
+<!--<input type="button" id="dislay" value="Display" onclick="display_array()">-->
+
+<!--<script>-->
+<!--    let x = 0;-->
+<!--    let array = Array();-->
+<!--    let V = 3;-->
+<!--    function add_element_to_array(){-->
+<!--        array[x]= document.getElementById("txtValue").value;-->
+<!--        alert("Số " + array[x] + " ở vị trí " + x);-->
+<!--        x++;-->
+<!--        document.getElementById("txtValue").value= "";-->
+<!--    }-->
+<!--    function display_array() {-->
+<!--        let check = false;-->
+<!--        for (let i = 0; i < array.length; i++) {-->
+<!--            if (array[i] === V) {-->
+<!--                check = true;-->
+<!--                document.write("V is in the array")-->
+<!--                break;-->
+<!--            }-->
+<!--        }-->
+<!--        if ( check === false) {-->
+<!--            document.write("V is not in the array")-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--bài 7:-->
+<!--<script>-->
+<!--    let arr = [1,2,3,4,5,6,7,8,9,10];-->
+<!--    let v = parseInt(prompt("nhập số cần tìm: "))-->
+<!--    for (let i = 0; i < arr.length; i++) {-->
+<!--        if(arr[i] === v) {-->
+<!--           del(i);-->
+<!--        }-->
+<!--    }-->
+<!--    function del(i){-->
+<!--        for (let j = 0; j < arr.length-1; j++) {-->
+<!--            arr[j] = arr[j+1]-->
+<!--        }-->
+<!--        arr[arr.length-1] = 0-->
+<!--    }-->
+<!--    alert(arr)-->
+<!--</script>-->
+
+<!--bài 8-->
+<!--<script>-->
+<!--    let array = [1,2,131,4,12,214,132,123,11,30];-->
+<!--    array.sort(function(a, b){return a - b});-->
+<!--    alert(array)-->
+<!--</script>-->
+
+<!--bài 9-->
+<script>
+    let array = [1,2,131,4,12,214,132,123,11,30];
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+    let c = array.concat(arr);
+    alert(c)
+</script>
+</body>
+</html>
