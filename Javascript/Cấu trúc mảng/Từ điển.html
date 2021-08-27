@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let ta = ["one","two","three"];
+let tv = ["một","hai","ba"];
+let keyword = prompt("Nhập vào từ cần tìm");
+let index = -1;
+for (let i = 0; i < ta.length; i++) {
+    if ( ta[i] === keyword) {
+        index = i
+    }
+}
+    if (index !== -1){
+        alert(tv[index]);
+    } else {
+        alert("không tìm thấy")
+    }
+</script>
+</body>
+</html>
