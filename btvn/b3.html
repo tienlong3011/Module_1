@@ -9,7 +9,7 @@
     let Arr = [1,2,3,4,5,6,7,8,12,14,16,17];
 
     function checkArr() {
-        let total2 = 0;
+        let number = 0;
         for (let i = 0; i < Arr.length; i++) {
             let check = true;
             if (Arr[i] >= 2 ) {
@@ -20,10 +20,10 @@
                     }
                 }
                 if (check === true) {
-                    total2 += Arr[i]
+                    number += Arr[i]
                 }
             }
-        } document.write("Tổng các số nguyên tố trong mảng là: " + total2)
+        } document.write("Tổng các số nguyên tố trong mảng là: " + number)
     }
     checkArr()
 </script>
