@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Arr = [1,2,3,4,5,6,7,8,12,14,16,17];
+
+    function checkArr() {
+        let total2 = 0;
+        for (let i = 0; i < Arr.length; i++) {
+            let check = true;
+            if (Arr[i] >= 2 ) {
+                for (let j = 2; j < Arr[i] - 1; j++) {
+                    if (Arr[i] % j === 0) {
+                        check = false;
+                        break;
+                    }
+                }
+                if (check === true) {
+                    total2 += Arr[i]
+                }
+            }
+        } document.write("Tổng các số nguyên tố trong mảng là: " + total2)
+    }
+    checkArr()
+</script>
+</body>
+</html>

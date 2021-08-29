@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,2,4,5,6,1,55,1,4,3,5,24,5,35,7,3];
+    let num = parseInt(prompt("nhập số a"));
+    let count = 0;
+    function check(){
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === num){
+                count++
+            }
+        }
+        return count
+    }
+    document.write("Số " + num + " đã lặp lại " + check() + " lần trong bảng !!! ")
+</script>
+</body>
+</html>
