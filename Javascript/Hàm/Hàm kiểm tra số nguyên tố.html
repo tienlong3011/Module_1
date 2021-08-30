@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<h2>Kiểm tra số nguyên tố</h2>
+<input name="prime" type="text" value="" id="Prime">
+<input type="button" onclick="checkPrime()" value="Check">
+<p id = "result"></p>
+<script>
+    function isPrime(){
+        let a = document.getElementById("Prime").value;
+        if (a < 2) {
+            return false;
+        } else {
+            if(a < 4) {
+                return true;
+            } else {
+                let check = true;
+                for (let i = 2; i <= Math.sqrt(a); i++) {
+                    if ( a % i === 0) {
+                        check = false;
+                    }
+                }
+                return check;
+            }
+        }
+    }
+
+    function checkPrime() {
+        let a = document.getElementById("Prime").value;
+        a = parseInt(a);
+        if (isPrime(a)) {
+            document.getElementById("result").innerText = a + " Là số nguyên tố"
+        } else {
+            document.getElementById("result").innerText = a + " Không là số nguyên tố"
+        }
+    }
+
+</script>
+</body>
+</html>
