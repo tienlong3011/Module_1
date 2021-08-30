@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bài 5 </title>
+</head>
+<body>
+<script>
+    function min32(num1,num2,num3){
+        min = num1;
+        if(num2 < min) {
+            min = num2;
+        }
+        if (num3 < min) {
+            min = num3;
+        }
+        return min;
+    }
+    let num1 = parseInt(prompt("Nhập số 1"))
+    let num2 = parseInt(prompt("Nhập số 2"))
+    let num3 = parseInt(prompt("Nhập số 3"))
+    alert("Số nhỏ nhất là: " + min32(num1,num2,num3))
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+<script>
+    function Change() {
+        let n = parseInt(prompt("nhập độ dài của mảng"));
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            let x = parseInt(prompt("Nhập số phần tử trong mảng"));
+            arr[i] = x;
+        }
+        return arr.reverse()
+    }
+
+    alert(Change())
+</script>
+</body>
+</html>

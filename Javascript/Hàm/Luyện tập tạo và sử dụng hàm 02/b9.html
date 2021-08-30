@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9</title>
+</head>
+<body>
+<script>
+    function Change() {
+        let n = parseInt(prompt("nhập độ dài của mảng"));
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            let x = prompt("Nhập số phần tử trong mảng");
+            arr[i] = x;
+        }
+        return arr;
+    }
+
+    function Check(){
+        let arr = Change();
+        let char = prompt("Nhập ký tự cần tìm")
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if(arr[i] === char) {
+                count++;
+            }
+        }
+        if (count !== 0){
+            return count
+        } else {
+            return -1
+        }
+    }
+
+    alert(Check());
+</script>
+</body>
+</html>
