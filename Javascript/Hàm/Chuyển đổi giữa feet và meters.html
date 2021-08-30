@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<h2>Đổi độ dài Meters và Feet</h2>
+<label for="convert"><input type="number" id="convert"></label>
+<input type="button" onclick="displayMeter()" value="Đổi ra mét">
+<input type="button" onclick="displayFeet()" value="Đổi ra feet">
+<p id = "result"></p>
+<script>
+    // function feetToMeter() {
+    //     let meter;
+    //     let feet = document.getElementById("convert").value;
+    //     feet = parseFloat(feet);
+    //     meter = 0.305 * feet;
+    //     document.getElementById("result").innerText = meter + "m";
+    // }
+    // function meterToFeet() {
+    //     let feet;
+    //     let meter = document.getElementById("convert").value;
+    //     meter = parseFloat(meter);
+    //     feet = 3.279 * meter;
+    //     document.getElementById("result").innerText = feet + "ft";
+    // }
+
+
+    function feetToMeter(feet) {
+        let meter;
+        meter = 0.305 * feet;
+       return meter;
+    }
+    function meterToFeet(meter) {
+        let feet;
+        feet = 3.279 * meter;
+        return feet;
+    }
+    function displayMeter(){
+        let result = feetToMeter(parseFloat(document.getElementById("convert").value));
+        document.getElementById("result").innerText = result +"ft";
+    }
+    function displayFeet(){
+        let result = meterToFeet(parseFloat(document.getElementById("convert").value));
+        document.getElementById("result").innerText = result +"ft";
+    }
+</script>
+</body>
+</html>
