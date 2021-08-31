@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý</title>
+    <style>
+        table tr td {
+            border: black 1px solid;
+        }
+    </style>
+
+</head>
+<body>
+<h3>Add New Product</h3>
+<label for="newP"></label><input type="text" placeholder="New Product"  id = "newP">
+<input type="button" value="Add" onclick="createNewProduct()">
+<p id="sumOfProduct"></p>
+
+<!--    tiêu đề-->
+<table>
+    <tr>
+        <td>Tên Sản phẩm</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <tbody id = "Product">
+<!--    <tr>-->
+<!--        <td>Tên Sản phẩm</td>-->
+<!--        <td>Edit</td>-->
+<!--        <td><button onclick="deleteProduct()">Delete</button></td>-->
+<!--    </tr>-->
+    </tbody>
+</table>
+<script src="Ứng dụng quản lý.js"></script>
+</body>
+</html>
