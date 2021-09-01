@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        Celsius;
+        constructor(Celsius) {
+            this.Celsius = Celsius
+        }
+        getCelsius(){
+            return this.Celsius;
+        }
+        getFahrenheit(){
+            if(this.Celsius > -273)
+                return (9/5 * this.Celsius) + 32;
+
+        }
+        getKelvin(){
+            if(this.Celsius > -273)
+                return this.Celsius + 273.15;
+
+        }
+    }
+    let inputCelsius = parseInt(prompt("Nhập Độ C "));
+    let temperature = new Temperature(inputCelsius);
+    let fahrenheit = temperature.getFahrenheit().toFixed(2);
+    let kelvin = temperature.getKelvin();
+    let celsius = temperature.getCelsius();
+    alert(celsius + " Độ C " + " = " + fahrenheit + " Độ F.");
+    alert(celsius + " Độ C " + " = " + kelvin + " Độ K.");
+</script>
+</body>
+</html>
