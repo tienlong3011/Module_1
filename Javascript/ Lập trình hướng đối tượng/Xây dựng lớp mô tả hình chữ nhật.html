@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="200" style="border: 1px solid"></canvas>
+<script>
+    class Rectangle{
+        constructor(width,height) {
+            this.width = width;
+            this.height = height;
+        }
+        getArea(){
+            return this.width * this.height;
+        }
+        getPerimeter(){
+            return (this.width + this.height)*2
+        }
+        drawCanvas(){
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.fillStyle = "#3e8acc"
+            ctx.fillRect(100,50,this.width,this.height);
+            ctx.fill();
+        }
+
+    }
+
+    let rectangle = new Rectangle(100,50);
+    let area = rectangle.getArea();
+    let perimeter = rectangle.getPerimeter();
+    alert("Diện tích là: " + area + "      " + "Chu vi là: " + perimeter);
+    rectangle.drawCanvas()
+</script>
+</body>
+</html>
