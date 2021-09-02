@@ -29,7 +29,9 @@
 
     }
 
-    let rectangle = new Rectangle(100,50);
+    let inputWidth = parseInt(prompt("Nhập chiều rộng"))
+    let inputHeight = parseInt(prompt("Nhập chiều rộng"))
+    let rectangle = new Rectangle(inputWidth,inputHeight);
     let area = rectangle.getArea();
     let perimeter = rectangle.getPerimeter();
     alert("Diện tích là: " + area + "      " + "Chu vi là: " + perimeter);
