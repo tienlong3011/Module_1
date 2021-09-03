@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flashlight</title>
+</head>
+<body>
+<h2>Flashlight</h2>
+<button onclick="turnOn()">On</button>
+<button onclick="turnOff()">Off</button>
+<button onclick="use()">Use</button>
+<button onclick="charge()">Charge</button>
+<script>
+    class Battery {
+        constructor(energy) {
+            this.energy = energy;
+        }
+        getEnergy(){
+            return this.energy;
+        }
+        getDecreaseEnergy(){
+            if(this.energy > 0){
+                this.energy--;
+            }
+        }
+
+        charge(){
+            this.energy++;
+        }
+
+        setEnergy(energy){
+            this.energy = energy;
+        }
+    }
+    class FlashLamp {
+        constructor(battery) {
+            this.battery = battery;
+            this.status = true;
+        }
+        getBatteryInfo() {
+            return this.battery.getEnergy();
+        }
+
+        Light() {
+            if (this.status) {
+                alert("lighting");
+            } else {
+                alert("Not lighting");
+            }
+        }
+        turnOn(){
+            return this.status;
+        }
+        turnOff(){
+            return this.status = false;
+        }
+        setBattery(battery){
+            this.battery = battery
+        }
+    }
+
+    let battery = new Battery();
+    battery.setEnergy(10);
+
+    let flashLamp = new  FlashLamp();
+    flashLamp.setBattery(battery);
+
+
+    function turnOn(){
+        alert("Battery info:" + flashLamp.getBatteryInfo());
+        flashLamp.Light();
+
+        alert("Turn on")
+        flashLamp.turnOn();
+        flashLamp.Light();
+
+    }
+    function turnOff(){
+        alert("Battery info:" + flashLamp.getBatteryInfo());
+        flashLamp.turnOff();
+        flashLamp.Light();
+        alert("Turn off");
+    }
+    function use() {
+        battery.getDecreaseEnergy();
+        alert("Battery info:" + flashLamp.getBatteryInfo());
+    }
+    function charge(){
+        battery.charge();
+        alert("Battery info:" + flashLamp.getBatteryInfo());
+
+    }
+
+
+    // document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+    // flashLamp.Light();
+    //
+    // document.write("Turn on<br/>")
+    // flashLamp.turnOn();
+    // flashLamp.light();
+    //
+    // document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+    // document.write("Turn off<br/>")
+    // flashLamp.turnOff();
+    // flashLamp.light();
+
+</script>
+</body>
+</html>
