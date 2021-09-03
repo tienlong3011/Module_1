@@ -92,23 +92,25 @@
 
 
     function turnOn(){
+        flashLamp.turnOn()
         alert("Battery info:" + flashLamp.getBatteryInfo());
+        alert("Turn on")
         flashLamp.Light();
 
-        alert("Turn on")
-        flashLamp.turnOn();
-        flashLamp.Light();
+
 
     }
     function turnOff(){
         alert("Battery info:" + flashLamp.getBatteryInfo());
-        flashLamp.turnOff();
-        flashLamp.Light();
-        alert("Turn off");
+        flashLamp.turnOff()
+        flashLamp.Light()
+        alert("Turn Off");
+
     }
     function use() {
         battery.getDecreaseEnergy();
         alert("Battery info:" + flashLamp.getBatteryInfo());
+
     }
     function charge(){
         battery.charge();
