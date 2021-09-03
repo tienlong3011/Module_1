@@ -6,10 +6,35 @@
 </head>
 <body>
 <h2>Flashlight</h2>
-<button onclick="turnOn()">On</button>
-<button onclick="turnOff()">Off</button>
-<button onclick="use()">Use</button>
-<button onclick="charge()">Charge</button>
+<button type="button" onclick="turnOn()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> ON
+</button>
+<button type="button" onclick="turnOff()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> OFF
+</button>
+<button type="button" onclick="use()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Use
+</button>
+<button type="button" onclick="charge()" style="cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> Charge
+</button>
+
 <script>
     class Battery {
         constructor(energy) {
@@ -92,17 +117,6 @@
     }
 
 
-    // document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-    // flashLamp.Light();
-    //
-    // document.write("Turn on<br/>")
-    // flashLamp.turnOn();
-    // flashLamp.light();
-    //
-    // document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-    // document.write("Turn off<br/>")
-    // flashLamp.turnOff();
-    // flashLamp.light();
 
 </script>
 </body>
