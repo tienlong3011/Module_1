@@ -65,7 +65,11 @@
         getBatteryInfo() {
             return this.battery.getEnergy();
         }
-
+        checkStatus(){
+            if(this.status === false){
+                alert("Turn on to use !")
+            }
+        }
         Light() {
             if (this.status) {
                 alert("lighting");
@@ -74,7 +78,7 @@
             }
         }
         turnOn(){
-            return this.status;
+            return this.status = true;
         }
         turnOff(){
             return this.status = false;
@@ -93,11 +97,10 @@
 
     function turnOn(){
         flashLamp.turnOn()
+        flashLamp.checkStatus()
         alert("Battery info:" + flashLamp.getBatteryInfo());
         alert("Turn on")
         flashLamp.Light();
-
-
 
     }
     function turnOff(){
@@ -108,7 +111,9 @@
 
     }
     function use() {
+        flashLamp.checkStatus()
         battery.getDecreaseEnergy();
+        flashLamp.Light()
         alert("Battery info:" + flashLamp.getBatteryInfo());
 
     }
@@ -117,8 +122,6 @@
         alert("Battery info:" + flashLamp.getBatteryInfo());
 
     }
-
-
 
 </script>
 </body>
