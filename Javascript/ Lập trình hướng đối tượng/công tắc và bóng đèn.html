@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Light bulb</title>
+</head>
+<body>
+<button onclick="switchOnOff()">On</button>
+<p id="result"></p>
+<script>
+  class SwitchButton {
+      lamp;
+    constructor() {
+    }
+    connectToLamp(lamp){
+        this.lamp = lamp;
+        alert("Kết nối thành công")
+    }
+      getStatus() {
+          return this.lamp.getStatus()
+      }
+    switchOff(){
+        this.lamp.status = true;
+    }
+    switchOn(){
+        this.lamp.status = false;
+
+    }
+  }
+
+  class ElectricLamp {
+    constructor() {
+      this.status = true;
+    }
+    getStatus(){
+        return this.status;
+    }
+    turnOff(){
+        document.getElementById("result").innerHTML = "Lamp is not light";
+    }
+    turnOn(){
+        document.getElementById("result").innerHTML = "Lamp is light";
+    }
+  }
+    let switchButton = new SwitchButton();
+    let electricLamp = new ElectricLamp();
+    switchButton.connectToLamp(electricLamp);
+
+    function switchOnOff() {
+       if(switchButton.getStatus()){
+           switchButton.switchOn();
+           electricLamp.turnOn();
+       } else {
+           switchButton.switchOff();
+           electricLamp.turnOff();
+       }
+    }
+
+
+</script>
+</body>
+</html>

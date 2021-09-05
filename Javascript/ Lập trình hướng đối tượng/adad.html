@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="turnOnLamp()">On</button>
+<p id = "result"></p>
+<script>
+
+  class SwitchButton {
+    lamp;
+    constructor() {
+    }
+    connectToElectricLamp(lamp) {
+      this.lamp = lamp;
+      alert("connect to the Lamp");
+    }
+    getStatus() {
+      return this.lamp.getStatus()
+    }
+    switchOff() {
+      this.lamp.status = true;
+    }
+    switchOn() {
+      this.lamp.status = false;
+    }
+  }
+  class ElectricLamp {
+      status;
+      constructor() {
+          this.status = true;
+      }
+      getStatus() {
+          return this.status;
+      }
+      turnOn() {
+          document.getElementById("result").innerHTML = "Lamp is light";
+      }
+      turnOff() {
+          document.getElementById("result").innerHTML = "Lamp is not light";
+      }
+  }
+  let newElectricLamp = new ElectricLamp();
+
+  let newSwitchButton = new SwitchButton();
+  newSwitchButton.connectToElectricLamp(newElectricLamp);
+  function turnOnLamp() {
+    if (newSwitchButton.getStatus()) {
+      newSwitchButton.switchOn()
+      newElectricLamp.turnOn()
+    } else {
+      newSwitchButton.switchOff()
+      newElectricLamp.turnOff()
+    }
+  }
+</script>
+</body>
+</html>

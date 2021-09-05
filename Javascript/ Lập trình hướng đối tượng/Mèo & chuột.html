@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tom & Jerry</title>
+</head>
+<body>
+<script>
+  class Jerry {
+    constructor(_name,_weight,_speed) {
+      this.name = _name;
+      this.weight = _weight;
+      this.speed = _speed;
+      this.status = true;
+    }
+    soundMouse() {
+      alert("chít,chít");
+    }
+  }
+
+  class Tom {
+    constructor(_name,_weight,_maxspeed) {
+      this.name = _name;
+      this.weight = _weight;
+      this.maxspeed = _maxspeed;
+  }
+    soundTom(){
+      alert("meomeo")
+    }
+    catch(Jerry){
+      if (this.maxspeed > Jerry.speed)
+        alert("Mèo đã bắt đc chuột")
+    }
+    eat(Jerry){
+        alert(this.name + " đang ăn thịt " + Jerry.name)
+        Jerry.status = false;
+        this.weight += Jerry.weight;
+
+    }
+  }
+
+  let jerry = new Jerry("Jerry",5,40);
+  let tom = new Tom("Tom",10,50);
+
+</script>
+</body>
+</html>
