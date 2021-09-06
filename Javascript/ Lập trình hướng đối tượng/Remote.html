@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>remote tv</title>
+</head>
+<body>
+<script>
+    class Tivi {
+        constructor(channel,volume,status) {
+            this.channel = channel;
+            this.volume = volume;
+            this.status = status
+        }
+        setChannel(newChannel){
+            this.channel = newChannel;
+        }
+        setVolume(newVolume){
+            this.volume = newVolume;
+        }
+        turnOnOff(){
+            this.status =! this.status
+    }
+    }
+    class Remote{
+        constructor(_code,_tivi) {
+            this.code = _code;
+            this.tivi = _tivi;
+        }
+        setTivi(tivi){
+            this.tivi = tivi;
+        }
+        changeChannel(newChannel){
+            this.tivi.setChannel(newChannel);
+        }
+        changeVolume(newVolume){
+            this.tivi.setVolume(newVolume);
+        }
+        OnOff(){
+            this.tivi.turnOnOff()
+        }
+    }
+
+    let tv1 = new TiVi(0, 0, true);
+    let remote = new Remote("Sony",tv1)
+</script>
+</body>
+</html>

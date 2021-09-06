@@ -60,7 +60,7 @@
     class FlashLamp {
         constructor(battery) {
             this.battery = battery;
-            this.status = true;
+            this.status = false;
         }
         getBatteryInfo() {
             return this.battery.getEnergy();
@@ -112,7 +112,9 @@
     }
     function use() {
         flashLamp.checkStatus()
-        battery.getDecreaseEnergy();
+        if(flashLamp.status === true) {
+            battery.getDecreaseEnergy();
+        }
         flashLamp.Light()
         alert("Battery info:" + flashLamp.getBatteryInfo());
 

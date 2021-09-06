@@ -21,41 +21,44 @@
 
 <!--bài 2:-->
 
-<script>
-    const number = parseInt(prompt("Nhập số cần tính:"));
-    let giaithua = 1;
+<!--<script>-->
+<!--    const number = parseInt(prompt("Nhập số cần tính:"));-->
+<!--    let giaithua = 1;-->
 
-    for (let i = 1; i <= number ; i++) {
-         giaithua *= i
-        }
-    alert(giaithua)
+<!--    for (let i = 1; i <= number ; i++) {-->
+<!--         giaithua *= i-->
+<!--        }-->
+<!--    alert(giaithua)-->
 
 
-    // document.write("Giai thừa của " + number + " là" + giaithua)
+<!--    // document.write("Giai thừa của " + number + " là" + giaithua)-->
 
-</script>
+<!--</script>-->
 
 <!--bài 3:-->
-<!--<script>-->
-<!--    for (let i = 1; i <= 5; i++) {-->
-<!--        for (let j = 1; j < i; j++) {-->
-<!--            document.write('&ensp;');-->
-<!--        }-->
-<!--        for (let j = 5; j >= i; j&#45;&#45;) {-->
-<!--            document.write('*');-->
-<!--        }-->
-<!--        document.write("<br>")-->
-<!--    }-->
+<script>
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j < i; j++) {
+            document.write('&ensp;');
+        }
+        for (let j = 5; j >= i; j--) {
+            document.write('*');
+        }
+        document.write("<br>")
+    }
 
-<!--    for (let i = 0; i <= 5; i++) {-->
-<!--        for (let j = 4; j >= i; j&#45;&#45;) {-->
-<!--            document.write('&ensp;');-->
-<!--        }-->
-<!--        for (let j = 1; j <= i; j++) {-->
-<!--            document.write('*');-->
-<!--        }-->
-<!--        document.write("<br>")-->
-<!--    }-->
-<!--</script>-->
+    for (let i = 0; i <= 5; i++) {
+        for (let j = 4; j >= i; j--) {
+            document.write('&ensp;');
+        }
+        for (let j = 1; j <= i; j++) {
+            document.write('*');
+        }
+        document.write("<br>")
+    }
+
+
+
+</script>
 </body>
 </html>

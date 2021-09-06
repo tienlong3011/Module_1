@@ -9,10 +9,13 @@
         }
     </style>
 
+
 </head>
 <body>
 <h3>Add New Product</h3>
-<label for="newP"></label><input type="text" placeholder="New Product"  id = "newP">
+<label for="newName"></label><input type="text"  id = "newName">
+<input id = "newPrice">
+<input id = "newNote">
 <input type="button" value="Add" onclick="createNewProduct()">
 <p id="sumOfProduct"></p>
 
@@ -20,6 +23,8 @@
 <table>
     <tr>
         <td>Tên Sản phẩm</td>
+        <td>Giá Sản phẩm</td>
+        <td>Thông tin Sản phẩm</td>
         <td>Edit</td>
         <td>Delete</td>
     </tr>
@@ -31,6 +36,7 @@
 <!--    </tr>-->
     </tbody>
 </table>
+<script src="ứng dụng.js"></script>
 <script src="Ứng dụng quản lý.js"></script>
 </body>
 </html>
