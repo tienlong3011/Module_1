@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let veso = [1,2,3,4,5];
+    let giaidacbiet = [2,3,4,5];
+    let count = 0
+    array.length = 4;
+    for (let i = 0; i < array.length; i++) {
+        array[i] = Math.floor(Math.random() * 10);
+    }
+    for (let i = 0; i < array.length; i++) {
+        document.write(array[i])
+    }
+    // for (let j = giaidacbiet.length - 1; j > -1; j--) {
+    //     if(giaidacbiet[j] === veso[j+1]){
+    //         count++
+    //     }
+    // }
+    // alert(count)
+    //
+    let arr = veso.slice(1,veso.length);
+    function check() {
+        let number = 0;
+        for (let i = array.length-1; i > -1 ; i--) {
+            if(arr[i] === array[i]){
+                number++;
+            }
+        }
+        if(number === array.length){
+            alert("chúc mừng bạn đã trúng giải" + number +  " số")
+        } else {
+            alert("bạn không chúng giải " + number + " số")
+        }
+    }
+
+    check()
+
+</script>
+</body>
+</html>

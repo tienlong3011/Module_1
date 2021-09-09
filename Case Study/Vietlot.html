@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table tr td {
+            border: black 2px solid;
+            width: 100px;
+        }
+        table{
+            border-collapse:collapse;
+            margin-top: 10px;
+        }
+        h1 {
+            color: red;
+        }
+        table td {
+            text-align: center;
+        }
+        p#date {
+            color: gray;
+        }
+    </style>
+
+</head>
+<body>
+<img style="display: inline; width: 70px  " src="source/12.png" alt="logo" />
+<h1 style="display: inline;">HỆ THỐNG SỔ XỐ SỐ 1 MIỀN BẮC</h1>
+<p id = "date"></p>
+<!--<audio autoplay >-->
+<!--    <source src="source/Xo-So-Mien-Bac-Nhac-Chuong-V-A-V-A.mp3" type="audio/mpeg"  >-->
+<!--</audio>-->
+
+<label for="name"></label><input type="text"  id = "name" placeholder="Họ và Tên">
+<label for="age"></label><input id = "age" placeholder="Tuổi">
+<label for="numberPhone"></label><input id = "numberPhone" placeholder="Số điện thoại">
+<label for="ticket"></label><input id = "ticket" placeholder="Vé số">
+<input type="button" value="create" onclick="newProduct()">
+<p>Thông tin người chơi</p>
+<p id="result"></p>
+<button onclick="randomNumber1()" >Quay thưởng </button>
+<button onclick="display()">Kiểm tra giải thưởng </button>
+
+<table>
+    <tr>
+        <td style="color: red " >Giải đặc biệt</td>
+        <td colspan="4" id = "specialPrize" style="color: red " ></td>
+    </tr>
+    <tr>
+        <td>Giải nhất</td>
+        <td colspan="4" id = "firstPrize" ></td>
+    </tr>
+    <tr>
+        <td>Giải nhì</td>
+        <td colspan="2" id = "secondPrize1" ></td>
+        <td colspan="2" id = "secondPrize2" ></td>
+
+    </tr>
+    <tr>
+        <td>Giải ba</td>
+        <td colspan="2" id = "thirdPrize1" ></td>
+        <td id = "thirdPrize2" ></td>
+        <td id = "thirdPrize3" ></td>
+    </tr>
+    <tr>
+        <td>Giải tư</td>
+        <td id = "fourPrize1" ></td>
+        <td id = "fourPrize2" ></td>
+        <td id = "fourPrize3" ></td>
+        <td id = "fourPrize4" ></td>
+    </tr>
+    <tr>
+        <td>Giải năm</td>
+        <td id = "fifPrize1" ></td>
+        <td id = "fifPrize2" ></td>
+        <td id = "fifPrize3" ></td>
+        <td id = "fifPrize4" ></td>
+    </tr>
+
+</table>
+<script src="profile.js"></script>
+<script src="random.js"></script>
+<script>
+    let today = new Date();
+    let date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    let dateTime = date+' '+time;
+
+    document.getElementById("date").innerHTML = "Hôm nay: " + dateTime;
+</script>
+</body>
+</html>

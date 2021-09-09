@@ -1,6 +1,4 @@
-let productList = [
-    new ProductList("Iphone Xsmax","10tr","fullBox")
-];
+let productList = [];
 //ten ham: showAllProduct
 //ds tham so: khong co:
 //dl tra ve: khong co
@@ -31,12 +29,14 @@ function createNewProduct() {
     let newName = document.getElementById("newName").value;
     let newPrice = document.getElementById("newPrice").value;
     let newNote= document.getElementById("newNote").value;
-    let newP = new ProductList(newName,newPrice,newNote);
-    productList.push(newP);
-    showAllProduct();
-    document.getElementById("newName").value = "";
-    document.getElementById("newPrice").value = "";
-    document.getElementById("newNote").value = "";
+        let newP = new ProductList(newName, newPrice, newNote);
+        productList.push(newP);
+        showAllProduct();
+        document.getElementById("newName").value = "";
+        document.getElementById("newPrice").value = "";
+        document.getElementById("newNote").value = "";
+
+
 }
 //ten ham: deleteProduct
 //ds tham so: index

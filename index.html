@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ai là triệu phú</title>
+    <script src="quiz.js"></script>
+    <script src="gamemanager.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Ai là triệu phú</h1>
+<div id = "quiz">
+    <div id = "question"></div>
+    <button class="ans" onclick="chooseAns(this.id)" id="ans-1">1</button>
+    <button class="ans" onclick="chooseAns(this.id)" id="ans-2">2</button>
+    <button class="ans" onclick="chooseAns(this.id)" id="ans-3">3</button>
+    <button class="ans" onclick="chooseAns(this.id)" id="ans-4">4</button>
+</div>
+<button onclick="nextQuiz()" id="next">Next Quiz</button>
+<button onclick="resetQuiz()" id="reset">Reset Quiz</button>
+<script>
+    let quiz1 = new Quiz("Đâu là một loại hình chợ tạm tự phát thường xuất hiện trong các khu dân cư?", ['A: Ếch',
+        'B: Cóc','C: Thằn lằn','D: Nhái'],'B: Cóc');
+    let quiz2 = new Quiz("Haiku là thể thơ truyền thống của nước nào?",
+        ['A: Nhật Bản','B: Mông Cổ','C: Trung Quốc','D: Hàn Quốc'],'A: Nhật Bản');
+    let quiz3 = new Quiz("Đâu là tên một loại bánh Huế?",
+        ['A: Khoái','B: Sướng','C: Thích','D: Vui'],'A: Khoái');
+
+    let gameManager = new GameManager(3);
+    gameManager.addQuiz(quiz1);
+    gameManager.addQuiz(quiz2);
+    gameManager.addQuiz(quiz3);
+
+
+    function displayQuiz(index){
+        document.getElementById('question').innerHTML = gameManager.quizs[index].question;
+        for (let i = 1; i <= gameManager.quizs[index].answer.length ; i++) {
+            document.getElementById('ans-'+ i).innerHTML = gameManager.quizs[index].answer[i - 1];
+        }
+    }
+
+    function nextQuiz(){
+        gameManager.nextQuiz()
+        displayQuiz(gameManager.current)
+    }
+    function endGame(){
+        gameManager.endGame();
+        displayQuiz(gameManager.current);
+    }
+    function chooseAns(id){
+        let ans = document.getElementById(id).innerHTML;
+        gameManager.chooseAnswer(ans);
+        if(gameManager.checkAnswer(ans)){
+            nextQuiz()
+        }else {
+            endGame();
+        }
+    }
+    function resetQuiz(){
+        gameManager.endGame()
+    }
+
+   displayQuiz(0)
+
+</script>
+
+</body>
+</html>
