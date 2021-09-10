@@ -11,6 +11,7 @@
         <img style="display: inline; width: 70px  " src="source/12.png" alt="logo"/>
         <h1 style="display: inline;">HỆ THỐNG SỔ XỐ SỐ 1 MIỀN BẮC</h1>
 </div>
+
         <audio autoplay id="mp3">
             <source src="source/Xo-So-Mien-Bac-Nhac-Chuong-V-A-V-A.mp3" type="audio/mpeg">
         </audio>
@@ -29,7 +30,7 @@
         <label for="age"></label><input id="age" placeholder="Tuổi" required="" >
         <label for="numberPhone"></label><input id="numberPhone" placeholder="Số điện thoại" required="" >
         <label for="ticket"></label><input id="ticket" placeholder="Vé số" required="" >
-        <input type="button" value="Create" onclick="newProduct(), playSound()">
+        <input type="button" value="Create" onclick="newProduct() ; playSound()">
         <p>Thông tin người chơi</p>
         <p id="result"></p>
         <button onclick="randomNumber1()">Quay thưởng</button>
@@ -74,8 +75,15 @@
             </tr>
 
         </table>
-<h1 id = "result2"></h1>
-<p id = "result3"></p>
+<h2>Các Nhà Tài Trợ</h2>
+<a href="https://fecredit.com.vn/" target="_blank"><img src="source/11.png" alt="logo FE" width="350px"/></a>
+<a href="https://vaytienmat.homecredit.vn/bat-dau-vay" target="_blank"><img src="source/22.png" alt="logo FE" width="350px"/></a> <hr/>
+<div id="footer">
+    <img style="display: inline" src="source/12.png" alt = "xskt" width="50px">
+    <p style="display: inline;">© 2021, Công ty TNHH Một thành viên Xổ số kiến thiết Thủ đô</p><br>
+    <p style="display: inline;">Địa chỉ: 53E - Hàng Bài - Hoàn Kiếm - Hà Nội.</p><br>
+    <p style="display: inline;">Điện thoại: 04.9433636 - Fax: 04.9438874 - Đường dây nóng: 04.9439928, 04.9433123</p>
+</div>
         <script src="profile.js"></script>
         <script src="random.js"></script>
         <script>

@@ -1,6 +1,6 @@
 table tr td {
     border: gray 2px solid;
-    width: 100px;
+    width: 130px;
 }
 
 table {
@@ -8,8 +8,10 @@ table {
     margin-top: 10px;
     /*font-family: arial, sans-serif;*/
 }
-
-h1 {
+tr {
+    height: 40px;
+}
+h1  {
     color: white;
 }
 th {
@@ -31,8 +33,12 @@ div {
     background-color: red;
     width: 740px;
 }
-
-
+h2 {
+    color: red;
+}
+a {
+    width: 300px;
+}
 
 
 /*Thanh công cụ*/
@@ -63,4 +69,16 @@ div {
     color: #EB6361;
 }
 
+/*chân trang*/
+#footer {
+    width: 50%;
+    background: #F1F1F1; /* light gray */
+    border-top: 1px solid #D4D4D4; /*
+    dark gray "topline" */
+    height: 150px;
+}
 
+hr {
+    width: 50%;
+    margin-left:0;
+}
