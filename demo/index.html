@@ -1,93 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        table tr td {
-            border: black 2px solid;
-            width: 100px;
-        }
-        table{
-            border-collapse:collapse;
-            margin-top: 10px;
-        }
-        h1 {
-            color: red;
-        }
-        table td {
-            text-align: center;
-        }
-        p#date {
-            color: gray;
-        }
-    </style>
-
+    <title>Ai là triệu phú</title>
+    <script src="quiz.js"></script>
+    <script src="gamemanager.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<img style="display: inline; width: 70px  " src="source/12.png" alt="logo" />
-<h1 style="display: inline;">HỆ THỐNG SỔ XỐ SỐ 1 MIỀN BẮC</h1>
-<p id = "date"></p>
-<!--<audio autoplay >-->
-<!--    <source src="source/Xo-So-Mien-Bac-Nhac-Chuong-V-A-V-A.mp3" type="audio/mpeg"  >-->
-<!--</audio>-->
-
-<label for="name"></label><input type="text"  id = "name" placeholder="Họ và Tên">
-<label for="age"></label><input id = "age" placeholder="Tuổi">
-<label for="numberPhone"></label><input id = "numberPhone" placeholder="Số điện thoại">
-<label for="ticket"></label><input id = "ticket" placeholder="Vé số">
-<input type="button" value="create" onclick="newProduct()">
-<p>Thông tin người chơi</p>
-<p id="result"></p>
-<button onclick="randomNumber1()" >Quay thưởng </button>
-<button onclick="display()">Kiểm tra giải thưởng </button>
-
-<table>
-    <tr>
-        <td style="color: red " >Giải đặc biệt</td>
-        <td colspan="4" id = "specialPrize" style="color: red " ></td>
-    </tr>
-    <tr>
-        <td>Giải nhất</td>
-        <td colspan="4" id = "firstPrize" ></td>
-    </tr>
-    <tr>
-        <td>Giải nhì</td>
-        <td colspan="2" id = "secondPrize1" ></td>
-        <td colspan="2" id = "secondPrize2" ></td>
-
-    </tr>
-    <tr>
-        <td>Giải ba</td>
-        <td colspan="2" id = "thirdPrize1" ></td>
-        <td id = "thirdPrize2" ></td>
-        <td id = "thirdPrize3" ></td>
-    </tr>
-    <tr>
-        <td>Giải tư</td>
-        <td id = "fourPrize1" ></td>
-        <td id = "fourPrize2" ></td>
-        <td id = "fourPrize3" ></td>
-        <td id = "fourPrize4" ></td>
-    </tr>
-    <tr>
-        <td>Giải năm</td>
-        <td id = "fifPrize1" ></td>
-        <td id = "fifPrize2" ></td>
-        <td id = "fifPrize3" ></td>
-        <td id = "fifPrize4" ></td>
-    </tr>
-
-</table>
-<script src="thongtin.js"></script>
-<script src="random11.js"></script>
+<h1>Ai là triệu phú</h1>
+<div id = "quiz">
+    <div id = "question"></div>
+    <button class="ans" onclick="chooseAns(this.id)" id="ans-1">1</button>
+    <button class="ans" onclick="chooseAns(this.id)" id="ans-2">2</button>
+    <button class="ans" onclick="chooseAns(this.id)" id="ans-3">3</button>
+    <button class="ans" onclick="chooseAns(this.id)" id="ans-4">4</button>
+</div>
+<button onclick="nextQuiz()" id="next">Next Quiz</button>
+<button onclick="resetQuiz()" id="reset">Reset Quiz</button>
 <script>
-    let today = new Date();
-    let date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    let dateTime = date+' '+time;
+    let quiz1 = new Quiz("Đâu là một loại hình chợ tạm tự phát thường xuất hiện trong các khu dân cư?", ['A: Ếch',
+        'B: Cóc','C: Thằn lằn','D: Nhái'],'B: Cóc');
+    let quiz2 = new Quiz("Haiku là thể thơ truyền thống của nước nào?",
+        ['A: Nhật Bản','B: Mông Cổ','C: Trung Quốc','D: Hàn Quốc'],'A: Nhật Bản');
+    let quiz3 = new Quiz("Đâu là tên một loại bánh Huế?",
+        ['A: Khoái','B: Sướng','C: Thích','D: Vui'],'A: Khoái');
 
-    document.getElementById("date").innerHTML = "Hôm nay: " + dateTime;
+    let gameManager = new GameManager(3);
+    gameManager.addQuiz(quiz1);
+    gameManager.addQuiz(quiz2);
+    gameManager.addQuiz(quiz3);
+
+
+    function displayQuiz(index){
+        document.getElementById('question').innerHTML = gameManager.quizs[index].question;
+        for (let i = 1; i <= gameManager.quizs[index].answer.length ; i++) {
+            document.getElementById('ans-'+ i).innerHTML = gameManager.quizs[index].answer[i - 1];
+        }
+    }
+
+    function nextQuiz(){
+        gameManager.nextQuiz()
+        displayQuiz(gameManager.current)
+    }
+    function endGame(){
+        gameManager.endGame();
+        displayQuiz(gameManager.current);
+    }
+    function chooseAns(id){
+        let ans = document.getElementById(id).innerHTML;
+        gameManager.chooseAnswer(ans);
+        if(gameManager.checkAnswer(ans)){
+            nextQuiz()
+        }else {
+            endGame();
+        }
+    }
+    function resetQuiz(){
+        gameManager.endGame()
+    }
+
+   displayQuiz(0)
+
 </script>
+
 </body>
 </html>
