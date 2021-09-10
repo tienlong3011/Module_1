@@ -12,9 +12,9 @@
         <h1 style="display: inline;">HỆ THỐNG SỔ XỐ SỐ 1 MIỀN BẮC</h1>
 </div>
 
-        <audio autoplay id="mp3">
-            <source src="source/Xo-So-Mien-Bac-Nhac-Chuong-V-A-V-A.mp3" type="audio/mpeg">
-        </audio>
+<!--        <audio autoplay id="mp3">-->
+<!--            <source src="source/Xo-So-Mien-Bac-Nhac-Chuong-V-A-V-A.mp3" type="audio/mpeg">-->
+<!--        </audio>-->
 <ul id="navbar">
     <li><a href="">XSMB</a></li>
     <li><a href="">XSMN</a></li>
@@ -26,11 +26,11 @@
 
 <br>
 <p id="date"></p>
-        <label for="name"></label><input type="text" id="name" placeholder="Họ và Tên" required="" >
-        <label for="age"></label><input id="age" placeholder="Tuổi" required="" >
-        <label for="numberPhone"></label><input id="numberPhone" placeholder="Số điện thoại" required="" >
-        <label for="ticket"></label><input id="ticket" placeholder="Vé số" required="" >
-        <input type="button" value="Create" onclick="newProduct() ; playSound()">
+        <label for="name"></label><input type="text" id="name" placeholder="Họ và Tên" oninput="checkP()">
+        <label for="age"></label><input id="age" placeholder="Tuổi" oninput="checkP()" >
+        <label for="numberPhone"></label><input id="numberPhone" placeholder="Số điện thoại" oninput="checkP()" >
+        <label for="ticket"></label><input id="ticket" placeholder="Vé số" oninput="checkP()" >
+        <input id="create" type="button" value="Create" onclick="newProduct();playSound()" disabled >
         <p>Thông tin người chơi</p>
         <p id="result"></p>
         <button onclick="randomNumber1()">Quay thưởng</button>

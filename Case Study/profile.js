@@ -49,6 +49,17 @@ function newProduct() {
     document.getElementById("age").value = "";
     document.getElementById("numberPhone").value = "";
     document.getElementById("ticket").value = "";
+    document.getElementById("create").disabled = true;
+
+}
+
+function checkP(){
+    if(document.getElementById("name").value !== ""
+        && document.getElementById("age").value !== ""
+        && document.getElementById("numberPhone").value !== ""
+        && document.getElementById("ticket").value !== ""){
+        document.getElementById("create").disabled = false;
+    }
 }
 
 
