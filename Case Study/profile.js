@@ -22,26 +22,9 @@ class Member {
         return this.ticket;
     }
 
-    setName(name) {
-        this.name = name;
-    }
-
-    setAge(age) {
-        this.age = age;
-    }
-
-    setPhone(phone) {
-        this.phone = phone;
-    }
-
-    setTicket(ticket) {
-        this.ticket = ticket;
-    }
 }
 
 let productList = [];
-// let member = new Member("", "", "", "");
-// productList.push(member)
 function showAllProduct() {
     let content = "";
     for (let i = 0; i < productList.length; i++) {
@@ -69,23 +52,5 @@ function newProduct() {
 }
 
 
-
-// let member = new Member();
-// let ticketS = member.ticket;
-// function check1(){
-//     let arr = ticketS.slice(1,ticketS.length);
-//         let number = 0;
-//         for (let i = array.length-1; i > -1 ; i--) {
-//             if(arr[i] === array[i]){
-//                 number++;
-//             }
-//         }
-//         if(number === array.length){
-//             alert("chúc mừng bạn đã trúng giải" + number +  " số")
-//         } else {
-//             alert("bạn không chúng giải " + number + " số")
-//         }
-//
-// }
 
 
