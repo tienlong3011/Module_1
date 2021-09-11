@@ -1,3 +1,4 @@
+/*chỉnh bảng*/
 table tr td {
     border: gray 2px solid;
     width: 130px;
@@ -15,7 +16,7 @@ h1  {
     color: white;
 }
 th {
-    background-color: antiquewhite;
+    background-color: #ffc67b;
 }
 table td {
     text-align: center;
@@ -37,7 +38,17 @@ h2 {
     color: red;
 }
 
-
+/*nút quay thưởng, kiểm tra giải thưởng*/
+button {
+    border: none;
+    background-color: bisque;
+    width: 151px;
+    height: 38px;
+    border-radius: 10%;
+}
+button:hover{
+    color: #fbcdca;
+}
 /*Thanh công cụ*/
 
 #navbar {
